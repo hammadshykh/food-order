@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1a",
+    "image": "/pizza.png",
+    "title": "Margherita Magic Pizza",
+    "description": "A timeless classic with a perfect harmony of tomato sauce, fresh mozzarella cheese, and aromatic basil leaves.",
+    "price": 600
+  },
+  {
+    "id": "2a",
+    "image": "/pizza.png",
+    "description": "Irresistible slices loaded with zesty tomato sauce, generous pepperoni, and a blanket of melted cheese.",
+    "title": "Pepperoni Paradise",
+    "price": 500
+  },
+  {
+    "id": "3a",
+    "image": "/pizza.png",
+    "description": "A veggie delight featuring a medley of colorful bell peppers, onions, mushrooms, olives, and tomatoes.",
+    "title": "Garden Feast",
+    "price": 900
+  },
+  {
+    "id": "4a",
+    "image": "/pizza.png",
+    "description": "A tropical twist with sweet pineapple chunks, savory ham, and a burst of flavors in every bite.",
+    "title": "Hawaiian Bliss",
+    "price": 800
+  },
+  {
+    "id": "5a",
+    "image": "/pizza.png",
+    "description": "Smoky barbecue sauce, tender chicken pieces, red onions, and gooey cheese create a mouthwatering BBQ experience.",
+    "title": "BBQ Chicken Delight",
+    "price": 1200
+  },
+  {
+    "id": "6a",
+    "image": "/pizza.png",
+    "description": "Grilled chicken, cherry tomatoes, fresh basil, and a drizzle of balsamic glaze elevate this pizza to gourmet status.",
+    "title": "Gourmet Margarita Chicken",
+    "price": 1500
+  }
+]

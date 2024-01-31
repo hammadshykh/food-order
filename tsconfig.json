@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.jsx", "src/app/page.jsx", "src/app/(pages)/Login/page.js", "src/app/api/auth/[...nextauth]/route.js", "src/app/(dashboard)/admin/AddMenu/page.js", "src/components/ui/data-table.jsx", "src/app/(dashboard)/admin/Users/columns.jsx"],
   "exclude": ["node_modules"]
 }
