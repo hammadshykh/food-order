@@ -22,7 +22,7 @@ export default function Categoreis() {
 
   useEffect(() => {
     dispatch(fetchCategories());
-  }, []);
+  }, [dispatch]);
 
   const handleChange = (e) => {
     setCategory(e.target.value);

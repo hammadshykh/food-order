@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import DialogDemo from "../MenuDialogBox";
+import Image from "next/image";
 
 const MenuItem = ({
   className,
@@ -25,7 +26,7 @@ const MenuItem = ({
     <Card className={cn("md:w-[320px]", className)} {...props}>
       <CardHeader className="flex justify-center items-center">
         <div className="w-2/3 justify-center">
-          <img src={image} className="block w-full" />
+          <Image src={image} className="block w-full" alt="asd" />
         </div>
       </CardHeader>
       <CardContent className="grid gap-4">

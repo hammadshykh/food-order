@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DollarSign } from "lucide-react";
+import Image from "next/image";
 
 export default function DialogDemo({
   price,
@@ -21,7 +22,7 @@ export default function DialogDemo({
       <DialogContent className="sm:max-w-[425px]">
         <div className="grid gap-4 py-4">
           <div className="w-[200px]">
-            <img src={image} className="block w-full" />
+            <Image src={image} className="block w-full" alt="asd" />
           </div>
           <div>
             <h2 className="font-bold my-4">{title}</h2>

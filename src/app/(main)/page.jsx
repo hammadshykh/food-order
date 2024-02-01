@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import { fetchMenuCards } from "../Context/reducers/menuFirestore";
 import { fetchCarts } from "../Context/reducers/cartFirestore";
 import { useRouter } from "next/navigation";
+import { ToastAction } from "@/components/ui/toast";
+import Image from "next/image";
 
 export default function Home() {
   const disPatch = useDispatch();
@@ -17,11 +19,11 @@ export default function Home() {
 
   useEffect(() => {
     disPatch(fetchMenuCards());
-  }, []);
+  }, [disPatch]);
 
   useEffect(() => {
     disPatch(fetchCarts());
-  }, []);
+  }, [disPatch]);
 
   const handlePageChange = (route)=>{
     navigate.push(route)
@@ -76,16 +78,16 @@ export default function Home() {
         </div>
         <div>
           <div className="md:w-2/3 w-full">
-            <img src="/pizza.png" alt="pizza" className="w-full block" />
+            <Image src="/pizza.png" alt="pizza" className="w-full block" />
           </div>
         </div>
       </div>
       <div>
         <div className="absolute left-0 top-3/4 lg:block hidden">
-          <img src="/sallad1.png" alt="pizza" className="w-full block" />
+          <Image src="/sallad1.png" alt="pizza" className="w-full block" />
         </div>
         <div className="absolute right-0 top-3/4 lg:block hidden">
-          <img src="/sallad2.png" alt="pizza" className="w-full block" />
+          <Image src="/sallad2.png" alt="pizza" className="w-full block" />
         </div>
       </div>
       {/* Section CHECK OUT */}

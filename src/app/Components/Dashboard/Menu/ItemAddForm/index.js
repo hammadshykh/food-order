@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { uploadImage } from "@/app/Context/actions";
 import { useToast } from "@/components/ui/use-toast";
+import Image from "next/image";
 
 const ItemAddForm = ({ onAdd, onToast }) => {
   const form = useForm();
@@ -72,7 +73,7 @@ const ItemAddForm = ({ onAdd, onToast }) => {
           </Button>
           {progress > 0 && <p>Upload Progress: {progress}%</p>}
           {error && <p>Error: {error}</p>}
-          {imageUrl && <img src={imageUrl} alt="Uploaded" />}
+          {imageUrl && <Image src={imageUrl} alt="Uploaded" />}
         </div>
       </div>
       <Form {...form}>
