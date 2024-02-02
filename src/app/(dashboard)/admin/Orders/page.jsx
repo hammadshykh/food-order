@@ -61,7 +61,7 @@ const data = [
 ];
 const Users = () => {
   return (
-    <div className="p-5">
+    <div className="md:p-5">
       <h1 className="text-2xl font-semibold">Order Access</h1>
       <OrderDataTable columns={columns} data={data} />
     </div>

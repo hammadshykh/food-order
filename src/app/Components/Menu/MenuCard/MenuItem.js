@@ -26,7 +26,13 @@ const MenuItem = ({
     <Card className={cn("md:w-[320px]", className)} {...props}>
       <CardHeader className="flex justify-center items-center">
         <div className="w-2/3 justify-center">
-          <Image src={image} className="block w-full" alt="asd" />
+          <Image
+            src={image}
+            className="block w-full"
+            width={350}
+            height={350}
+            alt="asd"
+          />
         </div>
       </CardHeader>
       <CardContent className="grid gap-4">

@@ -44,7 +44,7 @@ const data = [
 
 const Users = () => {
   return (
-    <div className="p-5">
+    <div className="md:p-5">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">User Access</h1>
         <div className="mb-[-7rem]">

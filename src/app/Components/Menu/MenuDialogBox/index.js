@@ -22,7 +22,13 @@ export default function DialogDemo({
       <DialogContent className="sm:max-w-[425px]">
         <div className="grid gap-4 py-4">
           <div className="w-[200px]">
-            <Image src={image} className="block w-full" alt="asd" />
+            <Image
+              src={image}
+              className="block w-full"
+              alt="asd"
+              width={200}
+              height={200}
+            />
           </div>
           <div>
             <h2 className="font-bold my-4">{title}</h2>

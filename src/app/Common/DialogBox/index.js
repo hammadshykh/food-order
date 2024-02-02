@@ -12,7 +12,7 @@ const MyDialog = ({ btn, children }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>{btn}</DialogTrigger>
-      <DialogContent className="sm:w-[625px] my-2 w-[320px]">
+      <DialogContent className="sm:w-[625px] my-5 w-[400px]">
         {/* <DialogHeader>
             <DialogTitle>Add Menu Item</DialogTitle>
             <DialogDescription>

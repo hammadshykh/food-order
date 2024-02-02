@@ -23,10 +23,10 @@ const SalesItem = ({
   ...props
 }) => {
   return (
-    <Card className={cn("md:w-[320px] dark:bg-gray-800 light:bg-gray-300", className)} {...props}>
+    <Card className={cn("md:w-[320px] w-full dark:bg-gray-800 light:bg-gray-300", className)} {...props}>
       <CardHeader className="flex justify-center items-center">
         <div className="w-2/3 justify-center">
-          <Image src={image} className="block w-full" alt="asd" />
+          <Image width={300} height={300} src={image} className="block w-full" alt="asd" />
         </div>
       </CardHeader>
       <CardContent className="grid gap-1">

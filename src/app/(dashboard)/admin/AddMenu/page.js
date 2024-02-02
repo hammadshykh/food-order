@@ -66,7 +66,7 @@ const AddMenu = () => {
           <div className="flex justify-between items-center">
             <h1>Add Menu</h1>
             <MyDialog btn={btn}>
-              <ScrollArea className="md:h-[480px] py-10 rounded-md px-2">
+              <ScrollArea className="h-[480px] py-10 rounded-md px-2">
                 <ItemAddForm onToast={toastHandler} onAdd={onAddMenuHandler} />
               </ScrollArea>
             </MyDialog>

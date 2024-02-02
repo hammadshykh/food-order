@@ -3,7 +3,7 @@ import MenuItem from "./MenuItem";
 const MenuList = ({ items, onEdit }) => {
   return (
     <>
-      <div className="flex flex-wrap gap-5 mt-10">
+      <div className="flex justify-center flex-wrap gap-5 mt-10">
         {items?.map((item, i) => (
           <MenuItem
             key={item.id}

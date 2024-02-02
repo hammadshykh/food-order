@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRightCircle, ArrowRightSquare } from "lucide-react";
-import SalesList from "@/app/Components/BestSales/SalesList"
+import SalesList from "@/app/Components/BestSales/SalesList";
 import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "@/components/ui/use-toast";
 import { useEffect } from "react";
@@ -9,11 +9,12 @@ import { fetchMenuCards } from "../Context/reducers/menuFirestore";
 import { fetchCarts } from "../Context/reducers/cartFirestore";
 import { useRouter } from "next/navigation";
 import { ToastAction } from "@/components/ui/toast";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 
 export default function Home() {
   const disPatch = useDispatch();
-  const navigate = useRouter()
+  const navigate = useRouter();
   const { toast } = useToast();
   const state = useSelector((state) => state.menuStore);
 
@@ -25,9 +26,9 @@ export default function Home() {
     disPatch(fetchCarts());
   }, [disPatch]);
 
-  const handlePageChange = (route)=>{
-    navigate.push(route)
-  }
+  const handlePageChange = (route) => {
+    navigate.push(route);
+  };
 
   const addToCartHandler = (item) => {
     if (item) {
@@ -48,7 +49,6 @@ export default function Home() {
     }
   };
 
-
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-between items-center">
@@ -61,14 +61,21 @@ export default function Home() {
             Pizza is the missing plece the makes every day complete, a simple
             yet dilicious joy in life
           </p>
-          <div className="flex" >
-            <Button onClick={()=> handlePageChange("/Menu")} className="rounded-3xl px-10 py-6">
+          <div className="flex">
+            <Button
+              onClick={() => handlePageChange("/Menu")}
+              className="rounded-3xl px-10 py-6"
+            >
               ORDER NOW{" "}
               <span className="ms-3">
                 <ArrowRightSquare />
               </span>
             </Button>
-            <Button onClick={()=> handlePageChange("/About")} variant="unstyled" className="rounded-3xl px-10 py-6">
+            <Button
+              onClick={() => handlePageChange("/About")}
+              variant="unstyled"
+              className="rounded-3xl px-10 py-6"
+            >
               Learn more{" "}
               <span className="ms-3">
                 <ArrowRightCircle />
@@ -77,21 +84,45 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <div className="md:w-2/3 w-full">
-            <Image src="/pizza.png" alt="pizza" className="w-full block" />
+          <div className="md:w-[500px] mt-5 w-[300px]">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                width={400}
+                height={400}
+                src="/pizza.png"
+                alt="Image"
+                className="rounded-md object-cover"
+              />
+            </AspectRatio>
           </div>
         </div>
       </div>
       <div>
-        <div className="absolute left-0 top-3/4 lg:block hidden">
-          <Image src="/sallad1.png" alt="pizza" className="w-full block" />
+        <div className="absolute left-0 top-3/4 w-[100px] lg:block hidden">
+          <AspectRatio ratio={16 / 9}>
+            <Image
+              width={200}
+              height={200}
+              src="/sallad1.png"
+              alt="Image"
+              className="rounded-md object-cover"
+            />
+          </AspectRatio>
         </div>
-        <div className="absolute right-0 top-3/4 lg:block hidden">
-          <Image src="/sallad2.png" alt="pizza" className="w-full block" />
+        <div className="absolute right-0 top-3/4 w-[100px] lg:block hidden">
+          <AspectRatio ratio={16 / 9}>
+            <Image
+              width={200}
+              height={200}
+              src="/sallad2.png"
+              alt="Image"
+              className="rounded-md object-cover"
+            />
+          </AspectRatio>
         </div>
       </div>
       {/* Section CHECK OUT */}
-      <div className="my-6">
+      <div className="mt-40">
         <div className="text-center">
           <p>CHECK OUT</p>
           <h1 className="text-red-500 font-extrabold italic text-5xl">
@@ -99,7 +130,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="my-5">
-          <SalesList items={state.menuCards}  />
+          <SalesList items={state.menuCards} />
         </div>
       </div>
     </div>
